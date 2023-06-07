@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+
+<GridPane xmlns="http://javafx.com/javafx"
+          xmlns:fx="http://javafx.com/fxml"
+          fx:controller="sample.ItemOptions"
+          prefHeight="300" prefWidth="600" maxWidth="600" minWidth="600" maxHeight="300" minHeight="300" gridLinesVisible="false" fx:id="main_container">
+
+    <rowConstraints>
+        <RowConstraints percentHeight="10"/>
+        <RowConstraints percentHeight="10"/>
+        <RowConstraints percentHeight="10"/>
+        <RowConstraints percentHeight="10"/>
+        <RowConstraints percentHeight="10"/>
+        <RowConstraints percentHeight="10"/>
+        <RowConstraints percentHeight="10"/>
+        <RowConstraints percentHeight="10"/>
+        <RowConstraints percentHeight="10"/>
+        <RowConstraints percentHeight="10"/>
+    </rowConstraints>
+
+    <columnConstraints>
+        <ColumnConstraints percentWidth="100"/>
+        <ColumnConstraints percentWidth="20"/>
+        <ColumnConstraints percentWidth="20"/>
+    </columnConstraints>
+
+    <Label fx:id="itemLabel" GridPane.rowIndex="0" GridPane.columnIndex="0" GridPane.halignment="CENTER" GridPane.columnSpan="3" textAlignment="CENTER" alignment="CENTER"/>
+    <Label text="Price" GridPane.rowIndex="1" GridPane.columnIndex="0" textAlignment="CENTER" alignment="CENTER"/>
+    <Label text="Tax:" GridPane.rowIndex="2" GridPane.columnIndex="0" textAlignment="CENTER" alignment="CENTER"/>
+    <Label text="Fees:" GridPane.rowIndex="3" GridPane.columnIndex="0" textAlignment="CENTER" alignment="CENTER"/>
+    <Label text="Taxable:" GridPane.rowIndex="4" GridPane.columnIndex="0" textAlignment="CENTER" alignment="CENTER"/>
+    <Label text="In Stock: " GridPane.rowIndex="5" GridPane.columnIndex="0" textAlignment="CENTER" alignment="CENTER"/>
+    <Label text="Minimum age: " GridPane.rowIndex="6" GridPane.columnIndex="0" textAlignment="CENTER" alignment="CENTER"/>
+    <Label text="Age Restriction: " GridPane.rowIndex="7" GridPane.columnIndex="0" textAlignment="CENTER" alignment="CENTER"/>
+    <Label fx:id="cartCount" GridPane.rowIndex="8" GridPane.columnIndex="0" textAlignment="CENTER" alignment="CENTER"/>
+    <Label fx:id="itemPrice" GridPane.rowIndex="1" GridPane.columnIndex="1" textAlignment="CENTER" alignment="CENTER"/>
+    <Label fx:id="itemTaxPrice" GridPane.rowIndex="2" GridPane.columnIndex="1" textAlignment="CENTER" alignment="CENTER"/>
+    <Label fx:id="itemFee" GridPane.rowIndex="3" GridPane.columnIndex="1" textAlignment="CENTER" alignment="CENTER"/>
+    <Label fx:id="itemTax" GridPane.rowIndex="4" GridPane.columnIndex="1" textAlignment="CENTER" alignment="CENTER"/>
+    <Label fx:id="itemCount" GridPane.rowIndex="5" GridPane.columnIndex="1" textAlignment="CENTER" alignment="CENTER"/>
+    <Label fx:id="itemAgeNum" GridPane.rowIndex="6" GridPane.columnIndex="1" textAlignment="CENTER" alignment="CENTER"/>
+    <Label fx:id="itemAgeRes" GridPane.rowIndex="7" GridPane.columnIndex="1" textAlignment="CENTER" alignment="CENTER"/>
+    <Button fx:id="addAmount" id="calc_btn_hover" styleClass="cash_btn" text="+" GridPane.rowIndex="8" GridPane.columnIndex="1" prefWidth="60" textAlignment="CENTER" alignment="CENTER"/>
+    <Button fx:id="removeAmount" id="calc_btn_hover"  styleClass="optionBTN_REMOVE" text="-" GridPane.rowIndex="8" GridPane.columnIndex="2" prefWidth="60" textAlignment="CENTER" alignment="CENTER"/>
+
+    <Button fx:id="openINV" styleClass="cash_btn" id="calc_btn_hover"   GridPane.columnIndex="0" GridPane.rowIndex="9" GridPane.halignment="LEFT" textAlignment="CENTER" alignment="CENTER"/>
+    <Button fx:id="removeAll" text="Remove All" styleClass="optionBTN_REMOVE" id="calc_btn_hover"   GridPane.columnIndex="0" GridPane.rowIndex="9" GridPane.halignment="CENTER" textAlignment="CENTER" alignment="CENTER"/>
+
+
+</GridPane>

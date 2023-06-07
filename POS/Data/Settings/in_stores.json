@@ -1,0 +1,9 @@
+[{"fees":"0.5","price":"2.99","name":"Slurp-small","count":"unavailable","age_restriction":  false, "tax":  false,"age": 0},
+  {"fees":"0.10","price":"3.15","name":"slurp-big","count":"unavailable","age_restriction":  false, "tax":  false,"age": 0},
+  {"fees":"0.0","price":"1.25","name":"small-soda-32","count":"unavailable","age_restriction":  false, "tax":  false,"age": 0},
+  {"fees":"0.0","price":"1.75","name":"big-soda","count":"unavailable","age_restriction":  false, "tax":  false,"age": 0},
+  {"fees":"0.5","price":"0.99","name":"liquor-shooter","count":"unavailable", "age_restriction":  true, "tax":  true,"age": 21},
+  {"fees":"0.10","price":"1.99","name":"liquor-half-point","count":"unavailable", "age_restriction":  true, "tax":  true,"age": 21},
+  {"fees":"0.15","price":"2.99","name":"liquor-point","count":"unavailable", "age_restriction":  true, "tax":  true,"age": 21}
+
+]

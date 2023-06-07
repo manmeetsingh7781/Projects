@@ -1,0 +1,26 @@
+.calc_btns{
+-fx-background-color: black;
+-fx-border-color: white;
+-fx-border-radius: 5;
+-fx-cursor: hand;
+-fx-text-fill: white;
+}
+
+.calc_btns:hover{
+    -fx-background-color: wheat;
+    -fx-text-fill: black;
+    -fx-border-color: black;
+}
+
+.output{
+    -fx-control-inner-background: black;
+     -fx-text-fill: white;
+     -fx-border-color: grey;
+     -fx-border-radius: 5;
+
+ }
+
+
+.main_container{
+    -fx-background-color: black;
+}

@@ -1,0 +1,237 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<?import java.net.URL?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.collections.FXCollections?>
+<?import javafx.geometry.Insets?>
+
+
+<BorderPane xmlns="http://javafx.com/javafx"
+            xmlns:fx="http://javafx.com/fxml"
+            fx:controller="sample.Menu"
+            fx:id="borderPane" >
+    <stylesheets>
+        <URL value="@menu.css" />
+    </stylesheets>
+
+    <left>
+
+
+        <GridPane hgap="10" vgap="10" fx:id="gridPane">
+        <rowConstraints>
+<!--                            <RowConstraints percentHeight="45" prefHeight="45"/>-->
+            <!--                <RowConstraints percentHeight="2"  prefHeight="2"/>-->
+            <!--                <RowConstraints percentHeight="2" prefHeight="2"/>-->
+            <!--                <RowConstraints percentHeight="2" prefHeight="2"/>-->
+            <!--                <RowConstraints percentHeight="2" prefHeight="2"/>-->
+
+        </rowConstraints>
+        <columnConstraints>
+            <ColumnConstraints percentWidth="100"/>
+        </columnConstraints>
+        <ListView  GridPane.valignment="TOP" styleClass="tansition_list" fx:id="transcitionList" GridPane.columnIndex="0" GridPane.rowIndex="0" GridPane.vgrow="ALWAYS"/>
+        <TilePane GridPane.columnIndex="0" GridPane.rowIndex="1" hgap="5">
+            <Button text="Hold" styleClass="trans_btns" fx:id="hold_trans"  />
+            <Button text="Cancel" styleClass="trans_btns"  fx:id="cancel_trans" onAction="#clearTrans" />
+            <Button text="Orders" styleClass="trans_btns"  fx:id="orders_trans"/>
+        </TilePane>
+        <Label text="Items: 0"  fx:id="numberOfItems" styleClass="trans_info" GridPane.rowIndex="2" GridPane.columnIndex="0"/>
+        <Label text="Taxes: 0.00"  fx:id="taxesAmount" styleClass="trans_info" GridPane.rowIndex="3" GridPane.columnIndex="0"/>
+        <Label text="Fees: 0.00"  fx:id="feesAmount" styleClass="trans_info" GridPane.rowIndex="4" GridPane.columnIndex="0"/>
+        <Label text="Total: 0.00" fx:id="totalAmount" styleClass="trans_info" GridPane.rowIndex="5" GridPane.columnIndex="0"/>
+            <Label GridPane.rowIndex="6"/>
+            <Label GridPane.rowIndex="7"/>
+    </GridPane>
+
+
+    </left>
+
+
+    <center>
+        <VBox spacing="30">
+            <VBox fx:id="mainPanel" styleClass="mainPanel" GridPane.rowIndex="0" GridPane.columnIndex="0">
+                <StackPane>
+                    <Button  mnemonicParsing="false"  StackPane.alignment="TOP_RIGHT" styleClass="settings_btn">
+                        <graphic>
+                            <ImageView fx:id="settingsIco" fitHeight="30.0" fitWidth="30.0" preserveRatio="true"/>
+                        </graphic>
+                    </Button>
+
+                    <HBox BorderPane.alignment="CENTER" prefHeight="30.0" minHeight="30" maxHeight="30" alignment="CENTER">
+                        <ListView  styleClass="items_display" GridPane.valignment="CENTER"  fx:id="items_display" orientation="HORIZONTAL" prefHeight="30.0"  BorderPane.alignment="CENTER">
+                            <items>
+                                <FXCollections  fx:factory="observableArrayList">
+                                    <String fx:value="  All Departments " />
+                                    <String fx:value=" In Store "/>
+                                    <String fx:value="   Others   "/>
+                                </FXCollections>
+                            </items>
+                        </ListView>
+                    </HBox>
+
+                </StackPane>
+
+                <Label/>
+                <Label/>
+
+                <ScrollPane prefHeight="450" minHeight="450" maxHeight="450" GridPane.fillHeight="true" fx:id="itemScrollPane" BorderPane.alignment="CENTER" styleClass="itemScrollPaneStyle">
+                    <TilePane  vgap="50" hgap="20" fx:id="items_panel" VBox.vgrow="ALWAYS" BorderPane.alignment="CENTER" styleClass="items_panelStyle"/>
+                </ScrollPane>
+
+
+
+            <GridPane prefHeight="390" minHeight="390" maxHeight="390" fx:id="keyPadGrid" hgap="50" vgap="20" GridPane.rowIndex="1" styleClass="keyPadGrid" GridPane.columnIndex="0"  GridPane.hgrow="ALWAYS">
+                <columnConstraints>
+                    <ColumnConstraints percentWidth="20"/>
+                    <ColumnConstraints percentWidth="20"/>
+                    <ColumnConstraints percentWidth="20"/>
+                    <ColumnConstraints percentWidth="20"/>
+                    <ColumnConstraints percentWidth="20"/>
+                    <ColumnConstraints percentWidth="20"/>
+                    <ColumnConstraints percentWidth="5"/>
+                </columnConstraints>
+<!--                <rowConstraints>-->
+<!--                    <RowConstraints percentHeight="20"/>-->
+<!--                    <RowConstraints percentHeight="20"/>-->
+<!--                    <RowConstraints percentHeight="20"/>-->
+<!--                    <RowConstraints percentHeight="20"/>-->
+<!--                    <RowConstraints percentHeight="20"/>-->
+<!--                </rowConstraints>-->
+
+
+                <TextField fx:id="keyPadText" styleClass="keyPadText" GridPane.columnIndex="0" GridPane.rowIndex="0" prefWidth="160"  GridPane.columnSpan="2"
+                           promptText="\$0.00"  prefHeight="100" alignment="CENTER_RIGHT">
+                    <font>
+                        <Font name="Rouge" size="32"/>
+                    </font>
+                    <GridPane.margin>
+                        <Insets right="2"/>
+                    </GridPane.margin>
+
+                </TextField>
+
+
+                 <Button  GridPane.rowIndex="0" GridPane.columnIndex="2" GridPane.halignment="LEFT" fx:id="bkSpaceBtn"
+                                   styleClass="calc_btn" id="calc_btn_hover" >
+                <font>
+                    <Font name="Rouge" size="22"/>
+                </font>
+                <graphic>
+                    <ImageView fx:id="bkSpaceIco" fitHeight="30.0" fitWidth="30.0" preserveRatio="true"/>
+                </graphic>
+            </Button>
+
+                <GridPane>
+
+<!--                    <columnConstraints>-->
+<!--                        <ColumnConstraints percentWidth="50"/>-->
+<!--                    </columnConstraints>-->
+                    <Button  onAction="#clearKeyPadText" fx:id="clearBtn" text="X"
+                             styleClass="calc_btn" id="calc_btn_hover" prefHeight="65">
+                     </Button>
+                </GridPane>
+
+
+                <Button styleClass="funs_btn" id="calc_btn_hover" accessibleText="system_function" wrapText="true" text="Lottery" prefWidth="220" prefHeight="100" GridPane.columnIndex="3" GridPane.rowIndex="0" GridPane.halignment="CENTER"/>
+
+                <Button styleClass="calc_btn" id="calc_btn_hover" wrapText="true"  text="7" prefWidth="220" prefHeight="100" GridPane.columnIndex="0" GridPane.rowIndex="1" GridPane.halignment="CENTER"/>
+                <Button styleClass="calc_btn" id="calc_btn_hover"  wrapText="true"  text="8" prefWidth="220" prefHeight="100" GridPane.columnIndex="1" GridPane.rowIndex="1" GridPane.halignment="CENTER" />
+                <Button styleClass="calc_btn" id="calc_btn_hover"  wrapText="true"  text="9" prefWidth="220" prefHeight="100" GridPane.columnIndex="2" GridPane.rowIndex="1"  GridPane.halignment="CENTER"/>
+                <Button styleClass="cash_funs" id="calc_btn_hover" accessibleText="system_function" wrapText="true"  text="EBT" prefWidth="220" prefHeight="100" GridPane.columnIndex="3" GridPane.rowIndex="1"  GridPane.halignment="CENTER"/>
+
+                <Button styleClass="calc_btn" id="calc_btn_hover" wrapText="true"   text="4" prefWidth="220" prefHeight="100" GridPane.columnIndex="0" GridPane.rowIndex="2" GridPane.halignment="CENTER"/>
+                <Button styleClass="calc_btn" id="calc_btn_hover" wrapText="true"   text="5" prefWidth="220" prefHeight="100" GridPane.columnIndex="1" GridPane.rowIndex="2" GridPane.halignment="CENTER" />
+                <Button styleClass="calc_btn" id="calc_btn_hover" wrapText="true"   text="6" prefWidth="220" prefHeight="100" GridPane.columnIndex="2" GridPane.rowIndex="2"  GridPane.halignment="CENTER"/>
+                <Button styleClass="cash_funs" id="calc_btn_hover"  wrapText="true" accessibleText="system_function" text="CREDIT" prefWidth="220" prefHeight="100" GridPane.columnIndex="3" GridPane.rowIndex="2"  GridPane.halignment="CENTER"/>
+
+                <Button styleClass="calc_btn" id="calc_btn_hover" wrapText="true"   text="1" prefWidth="220" prefHeight="100" GridPane.columnIndex="0" GridPane.rowIndex="3" GridPane.halignment="CENTER"/>
+                <Button styleClass="calc_btn" id="calc_btn_hover" wrapText="true"   text="2" prefWidth="220" prefHeight="100" GridPane.columnIndex="1" GridPane.rowIndex="3" GridPane.halignment="CENTER" />
+                <Button styleClass="calc_btn" id="calc_btn_hover" wrapText="true"   text="3" prefWidth="220" prefHeight="100" GridPane.columnIndex="2" GridPane.rowIndex="3"  GridPane.halignment="CENTER"/>
+                <Button styleClass="cash_funs" id="calc_btn_hover" wrapText="true"  accessibleText="system_function" text="DEBIT" prefWidth="220" prefHeight="100" GridPane.columnIndex="3" GridPane.rowIndex="3"  GridPane.halignment="CENTER"/>
+                <Button styleClass="calc_btn" id="calc_btn_hover" wrapText="true"   text="0" prefWidth="220" prefHeight="100" GridPane.columnIndex="0"  GridPane.rowIndex="4"  GridPane.halignment="CENTER"/>
+                <Button styleClass="calc_btn" id="calc_btn_hover" wrapText="true"  text="00" prefWidth="220" prefHeight="100" GridPane.columnIndex="1"  GridPane.rowIndex="4"  GridPane.halignment="CENTER"/>
+                <Button styleClass="calc_btn" id="calc_btn_hover" wrapText="true"  text="x" fx:id="timesItem" prefWidth="220" prefHeight="100" GridPane.columnIndex="2"  GridPane.rowIndex="4"  GridPane.halignment="CENTER"/>
+                <Button styleClass="cash_funs" id="calc_btn_hover" wrapText="true" accessibleText="system_function" text="Others" prefWidth="220" prefHeight="100" GridPane.columnIndex="3"  GridPane.rowIndex="4"  GridPane.halignment="CENTER"/>
+
+
+                <Button styleClass="funs_btn" id="calc_btn_hover"  wrapText="true" accessibleText="system_function" text="Discount" prefWidth="220" prefHeight="100" GridPane.columnIndex="4"  GridPane.rowIndex="0"  GridPane.halignment="CENTER"/>
+                <Button styleClass="cash_btn"  id="calc_btn_hover"  wrapText="true" accessibleText="cash"  text="Cash" prefWidth="220" prefHeight="100" GridPane.columnIndex="5"  GridPane.rowIndex="4"  GridPane.halignment="CENTER"/>
+                <Button styleClass="cash_btn"  id="calc_btn_hover" wrapText="true"  accessibleText="system_function" text="INV"  prefWidth="220" prefHeight="100" GridPane.columnIndex="5"  GridPane.rowIndex="1"  GridPane.halignment="CENTER"/>
+
+                <Button styleClass="gas_btn"  id="calc_btn_hover" wrapText="true"   accessibleText="system_function" text="Gas Pump" prefWidth="220" prefHeight="100" GridPane.columnIndex="5"  GridPane.rowIndex="0"  GridPane.halignment="CENTER"/>
+                <Button styleClass="cash_btn" id="calc_btn_hover"  wrapText="true" accessibleText="system_function" text="Refund" prefWidth="220" prefHeight="100" GridPane.columnIndex="4"  GridPane.rowIndex="1"  GridPane.halignment="CENTER"/>
+                <Button styleClass="cash_btn" id="calc_btn_hover"  wrapText="true" accessibleText="system_function" text="No-sale" prefWidth="220" prefHeight="100" GridPane.columnIndex="4"  GridPane.rowIndex="4"  GridPane.halignment="CENTER"/>
+
+                <Button styleClass="rand_amount_btn " id="calc_btn_hover" accessibleText="cash" wrapText="true" fx:id="rand_amount1" prefWidth="220" prefHeight="100" GridPane.columnIndex="4"  GridPane.rowIndex="2"  GridPane.halignment="CENTER"/>
+                <Button styleClass="rand_amount_btn " id="calc_btn_hover"  accessibleText="cash" wrapText="true" fx:id="rand_amount2"  prefWidth="220" prefHeight="100" GridPane.columnIndex="4"  GridPane.rowIndex="3"  GridPane.halignment="CENTER"/>
+                <Button styleClass="rand_amount_btn " id="calc_btn_hover" accessibleText="cash" wrapText="true"  fx:id="rand_amount3" prefWidth="220" prefHeight="100" GridPane.columnIndex="5"  GridPane.rowIndex="2"  GridPane.halignment="CENTER"/>
+                <Button styleClass="rand_amount_btn" id="calc_btn_hover" accessibleText="cash"  wrapText="true"  fx:id="rand_amount4"   prefWidth="220" prefHeight="100" GridPane.columnIndex="5"  GridPane.rowIndex="3"  GridPane.halignment="CENTER"/>
+
+            </GridPane>
+
+        </VBox>
+        </VBox>
+    </center>
+
+    <bottom>
+        <TilePane>
+            <HBox spacing="20"  TilePane.alignment="BOTTOM_LEFT" >
+
+                <Button text="Logout" styleClass="settings_btn"   fx:id="logoutBtn" GridPane.valignment="CENTER">
+                    <graphic>
+                        <ImageView fx:id="logoutIco"  fitHeight="50.0" fitWidth="50.0" preserveRatio="true"/>
+                    </graphic>
+                </Button>
+                <VBox spacing="10">
+                    <Label fx:id="currentUser">
+                        <padding>
+                            <Insets top="6"/>
+                        </padding>
+                    </Label>
+                    <Label fx:id="todaysDate" >
+                        <padding>
+                             <Insets bottom="6"/>
+                        </padding>
+                    </Label>
+                </VBox>
+            </HBox>
+
+
+            <TilePane alignment="CENTER" TilePane.alignment="CENTER">
+                <!--   APPS-->
+                <Button  text="Calc" fx:id="calculatorBtn" mnemonicParsing="false"  StackPane.alignment="TOP_CENTER" styleClass="settings_btn">
+                    <graphic>
+                        <ImageView fx:id="calculatorIco"  fitHeight="30.0" fitWidth="30.0" preserveRatio="true"/>
+                    </graphic>
+                </Button>
+
+                <Button text="Apps" fx:id="appsBtn"   mnemonicParsing="false"  styleClass="settings_btn">
+                    <graphic>
+                        <ImageView fx:id="appsIco"  fitHeight="30.0" fitWidth="30.0" preserveRatio="true"/>
+                    </graphic>
+                </Button>
+
+
+                <Button text="Receipts"  fx:id="receipts"  mnemonicParsing="false"  styleClass="settings_btn">
+                    <graphic>
+                        <ImageView fx:id="receiptsIco"  fitHeight="30.0" fitWidth="30.0" preserveRatio="true"/>
+                    </graphic>
+                </Button>
+
+
+                <Button text="Profile"  fx:id="profilesBtn"  mnemonicParsing="false"  styleClass="settings_btn">
+                    <graphic>
+                        <ImageView fx:id="profilesIco" fitHeight="50.0" fitWidth="50.0" preserveRatio="true" />
+                    </graphic>
+                </Button>
+
+            </TilePane>
+        </TilePane>
+    </bottom>
+</BorderPane>

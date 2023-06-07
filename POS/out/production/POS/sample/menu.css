@@ -1,0 +1,144 @@
+.trans_info{
+     -fx-padding: 0 0 0 10;
+}
+
+.settings_btn{
+ -fx-cursor: hand;
+}
+
+
+.itemScrollPaneStyle{
+    -fx-background-color: transparent;
+}
+
+.items_display{
+ -fx-cursor: hand;
+ -fx-background-color: black;
+ -fx-text-fill: white;
+}
+
+.items_panelStyle{
+   -fx-padding: 0 0 0 20;
+}
+
+.keyPadGrid{
+   -fx-padding: 0 20 0 20;
+}
+
+.calc_btn{
+   -fx-background-color: #008CBA; /* Green */
+    -fx-border: none;
+    -fx-text-fill: white;
+    -fx-padding: 15px 32px;
+    -fx-text-align: center;
+    -fx-text-decoration: none;
+    -fx-display: inline-block;
+    -fx-margin: 4px 2px;
+    -fx-cursor: pointer;
+}
+
+.cash_funs{
+ -fx-background-color: #f44336; /* RED */
+    -fx-border: none;
+    -fx-text-fill: white;
+    -fx-padding: 15px 32px;
+    -fx-text-align: center;
+    -fx-text-decoration: none;
+    -fx-display: inline-block;
+    -fx-margin: 4px 2px;
+    -fx-cursor: pointer;
+}
+
+.item_buttons_panel, .trans_btns{
+   -fx-background-color: black;
+   -fx-text-fill: white;
+   -fx-text-weight: bolder;
+    -fx-transition-time: 0.5;
+    -fx-cursor: hand;
+  -fx-border-style: solid;
+  -fx-border-radius: 5;
+  -fx-border-color: white;
+}
+
+.item_buttons_panel_outOfStock{
+  -fx-background-color: red;
+   -fx-text-fill: white;
+   -fx-text-weight: bolder;
+    -fx-transition-time: 0.5;
+    -fx-cursor: hand;
+  -fx-border-style: solid;
+  -fx-border-radius: 5;
+  -fx-border-color: white;
+}
+
+.item_buttons_panel:hover, .trans_btns:hover{
+   -fx-background-color: wheat;
+   -fx-text-fill: black;
+   -fx-text-weight: bolder;
+    -fx-transition-time: 0.5;
+    -fx-cursor: hand;
+  -fx-border-style: solid;
+  -fx-border-color: black;
+}
+
+
+#calc_btn_hover:hover {
+    -fx-background-color: #555555;
+        -fx-text-fill: white;
+        -fx-text-weight: bolder;
+         -fx-transition-time: 0.5;
+         -fx-cursor: hand;
+       -fx-border-style: solid;
+       -fx-border-color: white;
+       -text-wrap: true;
+       wrap-text: true;
+}
+
+
+.funs_btn{
+    -fx-background-color: lightBlue;
+}
+
+.cash_btn{
+ -fx-background-color: #4CAF50; /* Green */
+    -fx-border: none;
+    -fx-text-fill: white;
+    -fx-text-align: center;
+    -fx-text-decoration: none;
+    -fx-display: inline-block;
+    -fx-cursor: pointer;
+}
+
+.optionBTN_REMOVE{
+ -fx-background-color: red; /* Green */
+    -fx-border: none;
+    -fx-text-fill: white;
+    -fx-text-align: center;
+    -fx-text-decoration: none;
+    -fx-display: inline-block;
+    -fx-cursor: pointer;
+}
+
+
+.rand_amount_btn{
+     -fx-background-color: lightGreen;
+     -fx-text-fill: black;
+     -fx-border-color: black;
+}
+.gas_btn{
+    -fx-background-color: orange;
+}
+
+.keyPadText{
+   -fx-margin-left: 40px;
+   -fx-border-style: solid;
+   -fx-border-radius: 5;
+   -fx-border-color: white;
+}
+
+
+.rand_amount_btn{
+
+
+}
+

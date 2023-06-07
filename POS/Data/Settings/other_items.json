@@ -1,0 +1,8 @@
+[{"fees":"0.0","price":"0.35","name":"bubble-gum","count":"0","tax":false,"age_restriction":false,"age":0},
+  {"fees":"0.0","price":"ask","name":"snacks","count":"unavailable","tax":true,"age_restriction":false,"age":0},
+  {"fees":"0.1","price":"1.99","name":"cookies","count":"unavailable","tax":false,"age_restriction":false,"age":0}
+,{"fees":"0.15","price":"3.99","name":"engine-oil","count":"unavailable","tax":false,"age_restriction":false,"age":0},
+  {"fees":"0.0","price":"1.89","name":"chips-small","count":"unavailable","tax":false,"age_restriction":false,"age":0},
+  {"fees":"0.0","price":"2.99","name":"chips-mid","count":"unavailable","tax":false,"age_restriction":false,"age":0},
+  {"fees":"0.0","price":"3.99","name":"chips-large","count":"unavailable","tax":false,"age_restriction":false,"age":0}
+,{"fees":"0.1","price":"1.99","name":"cookies","count":"10","tax":false,"age_restriction":false,"age":0}]
